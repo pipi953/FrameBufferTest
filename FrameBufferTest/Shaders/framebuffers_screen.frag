@@ -7,8 +7,15 @@ uniform sampler2D screenTexture;
 
 void main()
 {
-	//	原始颜色
-    vec3 col = texture(screenTexture, TexCoords).rgb;
-	FragColor = vec4(col, 1.0);		
+//	//	原始颜色
+//    vec3 col = texture(screenTexture, TexCoords).rgb;
+//	FragColor = vec4(col, 1.0);		
+
+	//	反相颜色
+	FragColor = vec4(vec3(1.0 - texture(screenTexture, TexCoords)), 1.0);
+
+
 
 } 
+
+
