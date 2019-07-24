@@ -160,6 +160,8 @@
   <ItemGroup>
     <None Include="Shaders\framebuffers.frag" />
     <None Include="Shaders\framebuffers.vert" />
+    <None Include="Shaders\framebuffers_screen.frag" />
+    <None Include="Shaders\framebuffers_screen.vert" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Shader.h" />
