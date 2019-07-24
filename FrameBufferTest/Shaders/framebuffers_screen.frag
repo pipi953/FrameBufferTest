@@ -11,10 +11,14 @@ void main()
 //    vec3 col = texture(screenTexture, TexCoords).rgb;
 //	FragColor = vec4(col, 1.0);		
 
-	//	反相颜色
-	FragColor = vec4(vec3(1.0 - texture(screenTexture, TexCoords)), 1.0);
+//	//	反相颜色
+//	FragColor = vec4(vec3(1.0 - texture(screenTexture, TexCoords)), 1.0);
 
 
+	//	灰度图像
+	FragColor = texture(screenTexture, TexCoords);
+	float average = (FragColor.r + FragColor.g + FragColor.b) / 3.0;
+	FragColor = vec4(average, average, average, 1.0);
 
 } 
 
